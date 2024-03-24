@@ -1,8 +1,22 @@
-import logo from "./logo.svg"
-import "./App.css"
+import LineWrapper from "./components/LineWrapper"
+import ClassA from "./components/q1/ClassContext"
+import FunctionContextA from "./components/q1/FunctionContextA"
+import GrandfatherComponent from "./components/q2_q3/GrandfatherComponent"
 
 function App() {
-	return <h1>teste</h1>
+	return (
+		<div>
+			<LineWrapper>
+				<h2>Q1</h2>
+				<FunctionContextA />
+				<ClassA />
+			</LineWrapper>
+			<LineWrapper>
+				<h2>Q2 & Q3</h2>
+				<GrandfatherComponent />
+			</LineWrapper>
+		</div>
+	)
 }
 
 export default App
