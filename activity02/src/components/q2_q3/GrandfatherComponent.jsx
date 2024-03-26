@@ -17,8 +17,8 @@ function GrandfatherComponent() {
 	return (
 		<>
 			<PokemonContext.Provider value={context}>
-				<Button onClick={() => setIndex(index + 1)} label="Increment" />
-				<Button onClick={() => setIndex(Math.abs(index - 1))} label="Decrement" />
+				<Button onClick={() => setIndex(index + 3)} label="Next Gen" />
+				<Button onClick={() => setIndex(index - 3 < 0 ? 1 : index - 3)} label="Previous Gen" />
 				<h3>Grandfather</h3>
 				<PokeImage baseUrl={pokeContext.baseUrl} index={index} suffix={pokeContext.suffix} />
 				<SonComponent />
