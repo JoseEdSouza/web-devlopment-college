@@ -1,0 +1,29 @@
+Problema do props drilling
+
+O props drilling é um problema que ocorre quando um componente precisa passar uma propriedade para um componente filho, 
+que por sua vez passa essa propriedade para outro componente filho, e assim por diante. Isso pode tornar o código confuso e difícil de manter, 
+pois é necessário passar a propriedade por vários níveis de componentes.
+
+
+Então, para resolver esse problema, podemos usar o contexto do React. O contexto permite que dados sejam passados para todos os componentes filhos,
+sem a necessidade de passar manualmente as propriedades de um componente para outro. Isso torna o código mais limpo e fácil de entender.
+
+No React, o contexto é uma forma de compartilhar dados entre componentes sem precisar passar manualmente as props de um componente para outro.
+Ele é útil quando queremos passar dados para vários componentes aninhados, sem a necessidade de passar as props manualmente em cada nível.
+
+Para criar um contexto no React, podemos usar a função createContext() que retorna um objeto com Provider e Consumer. O Provider é responsável por
+fornecer os dados para os componentes filhos, enquanto o Consumer é usado para acessar esses dados nos componentes filhos.
+
+No componete Questão05.tsx localizado nesse diretório, foi criado um exemplo de como usar o contexto do React para resolver o problema do props drilling.
+
+Nesse exemplo, temos um componente Pai que exibe um contador e também exibe um componente Filho.
+O filho, por sua vez, não edita o contador diretamente, mas sim através de um componente neto.
+O neto é o responsável por incrementar e decrementar o contador, ele acessa a função de incrementar do contexto criado no componente Pai.
+
+Dessa forma, o contexto do React permite que o componente neto acesse e modifique o estado do contador sem a necessidade de passar manualmente as props
+para o componente Filho e depois para o componente neto.
+
+Esse é um exemplo simples de como usar o contexto do React para evitar o props drilling e tornar o código mais limpo e fácil de entender.
+
+Portanto, concluí-se que o contexto do React é uma ótima solução para o problema do props drilling, 
+pois permite compartilhar dados entre componentes.
